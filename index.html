@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPH Events | Event & Teltudlejning i København</title>
+    <title>EVENTS.CPH | Eksklusive Fester & Events</title>
     <style>
         /* Nulstil standard margin/padding */
         * {
@@ -14,14 +14,15 @@
         }
 
         body {
-            color: #333;
-            background-color: #f9f9f9;
+            color: #eeeeee;
+            background-color: #0b0c10; /* Helt mørk/sort baggrund */
             line-height: 1.6;
         }
 
         /* Navigation */
         header {
-            background-color: #1a252f;
+            background-color: #1f2833; /* Mørkegrå menu */
+            border-bottom: 2px solid #66fcf1; /* Neon-streg i bunden af menuen */
             color: #fff;
             padding: 20px 50px;
             display: flex;
@@ -34,9 +35,9 @@
 
         header .logo {
             font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: #00adb5;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #66fcf1; /* Neon/turkis farve til logo */
         }
 
         nav a {
@@ -48,13 +49,13 @@
         }
 
         nav a:hover {
-            color: #00adb5;
+            color: #66fcf1;
         }
 
         /* Hero / Velkomst-sektion */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -65,33 +66,46 @@
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 54px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .hero h1 span {
+            color: #66fcf1;
         }
 
         .hero p {
-            font-size: 20px;
-            margin-bottom: 25px;
+            font-size: 22px;
+            margin-bottom: 30px;
             max-width: 600px;
+            color: #c5a059; /* Guld/bronze detalje til tekst */
+            font-weight: 300;
         }
 
         .cta-btn {
-            background-color: #00adb5;
-            color: #fff;
-            padding: 12px 30px;
+            background-color: #66fcf1;
+            color: #0b0c10;
+            padding: 14px 35px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
         }
 
         .cta-btn:hover {
-            background-color: #007c82;
+            background-color: #45a29e;
+            color: #fff;
+            box-shadow: 0 0 25px rgba(102, 252, 241, 0.6);
         }
 
-        /* Tjenester / Services sektion */
+        /* Tjenester / Koncepter sektion */
         .services {
-            padding: 60px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: auto;
             text-align: center;
@@ -100,16 +114,12 @@
         .services h2 {
             font-size: 36px;
             margin-bottom: 40px;
-            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .services h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: #00adb5;
-            margin: 10px auto 0 auto;
+        .services h2 span {
+            color: #66fcf1;
         }
 
         .grid {
@@ -119,56 +129,70 @@
         }
 
         .card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            background: #1f2833; /* Mørke kort */
+            padding: 40px 30px;
+            border-radius: 10px;
+            border: 1px solid #2f3b4c;
+            transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            border-color: #66fcf1;
+            box-shadow: 0 5px 20px rgba(102, 252, 241, 0.1);
         }
 
         .card h3 {
-            font-size: 22px;
+            font-size: 24px;
             margin-bottom: 15px;
-            color: #1a252f;
+            color: #fff;
+        }
+
+        .card p {
+            color: #c5c6c7;
         }
 
         /* Galleri sektion */
         .gallery-section {
-            background-color: #f0f4f5;
-            padding: 60px 20px;
+            background-color: #12141c; /* Lidt anderledes mørk nuance */
+            padding: 80px 20px;
             text-align: center;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             max-width: 1200px;
-            margin: 30px auto 0 auto;
+            margin: 40px auto 0 auto;
         }
 
         .gallery-grid img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
-            border-radius: 5px;
-            transition: opacity 0.3s;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            filter: grayscale(30%);
         }
 
         .gallery-grid img:hover {
-            opacity: 0.8;
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
         /* Kontakt sektion */
         .contact {
-            padding: 60px 20px;
+            padding: 80px 20px;
             max-width: 600px;
             margin: auto;
             text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
         }
 
         .contact form {
@@ -180,34 +204,45 @@
 
         .contact input, .contact textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
+            padding: 14px;
+            background-color: #1f2833;
+            border: 1px solid #2f3b4c;
             border-radius: 5px;
             font-size: 16px;
+            color: #fff;
+        }
+
+        .contact input:focus, .contact textarea:focus {
+            outline: none;
+            border-color: #66fcf1;
         }
 
         .contact button {
-            background-color: #1a252f;
-            color: white;
+            background-color: #66fcf1;
+            color: #0b0c10;
             border: none;
-            padding: 12px;
+            padding: 14px;
             font-size: 18px;
             font-weight: bold;
             border-radius: 5px;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: background 0.3s;
         }
 
         .contact button:hover {
-            background-color: #00adb5;
+            background-color: #45a29e;
+            color: #fff;
         }
 
         /* Footer */
         footer {
-            background-color: #1a252f;
-            color: #7f8c8d;
+            background-color: #0b0c10;
+            border-top: 1px solid #1f2833;
+            color: #45a29e;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             font-size: 14px;
         }
     </style>
@@ -215,65 +250,27 @@
 <body>
 
     <header>
-        <div class="logo">CPH.EVENTS</div>
+        <div class="logo">EVENTS.CPH</div>
         <nav>
-            <a href="#services">Tjenester</a>
+            <a href="#koncepter">Koncepter</a>
             <a href="#galleri">Galleri</a>
-            <a href="#kontakt">Kontakt</a>
+            <a href="#kontakt">Book Nu</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Skab Uforglemmelige Events</h1>
-        <p>Vi udlejer telte, møbler og totalløsninger til bryllupper, firmafester og festivaler i hele København.</p>
-        <a href="#kontakt" class="cta-btn">Få et uforpligtende tilbud</a>
+        <h1>De Vildeste Fester i <span>København</span></h1>
+        <p>Eksklusive klub-events, privatfester og uforglemmelige nætter.</p>
+        <a href="#kontakt" class="cta-btn">Sæt dit event i gang</a>
     </section>
 
-    <section class="services" id="services">
-        <h2>Vores Tjenester</h2>
+    <section class="services" id="koncepter">
+        <h2>Vores <span>Koncepter</span></h2>
         <div class="grid">
             <div class="card">
-                <h3>Teltudlejning</h3>
-                <p>Smukke, vind- og vandtætte telte og pavilloner i alle størrelser tilpasset jeres lokation.</p>
+                <h3>Klub Events</h3>
+                <p>Vi arrangerer og promoverer de sprødeste fester på Københavns hotteste lokationer med top-DJs og vildt lysshow.</p>
             </div>
             <div class="card">
-                <h3>Møbler & Service</h3>
-                <p>Udlejning af borde, stole, loungemøbler, service, lys og professionelle lydanlæg.</p>
-            </div>
-            <div class="card">
-                <h3>Event Planlægning</h3>
-                <p>Fra idé til afvikling. Vores dedikerede team hjælper med logistikken, så du kan nyde festen.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="gallery-section" id="galleri">
-        <h2>Galleri & Inspiration</h2>
-        <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=400&q=80" alt="Event 1">
-            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=400&q=80" alt="Event 2">
-            <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=400&q=80" alt="Event 3">
-            <img src="https://images.unsplash.com/photo-1505232458627-4a0682d571f4?auto=format&fit=crop&w=400&q=80" alt="Event 4">
-        </div>
-    </section>
-
-    <section class="contact" id="kontakt">
-        <h2>Kontakt Os</h2>
-        <p>Lad os tage en snak om dit næste arrangement i København.</p>
-        
-        <form action="#" method="POST">
-            <input type="text" name="navn" placeholder="Dit Navn" required>
-            <input type="email" name="email" placeholder="Din E-mail" required>
-            <input type="text" name="emne" placeholder="Hvilken type event?">
-            <textarea name="besked" rows="5" placeholder="Fortæl os lidt om dine ønsker..." required></textarea>
-            <button type="submit">Send Besked</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 CPH Events. Alle rettigheder forbeholdes. Udviklet via GitHub.</p>
-    </footer>
-
-</body>
-</html>
-Opret index.html
+                <h3>Privatfester</h3>
+                <p>Skal du holde den ultimative fødselsdag eller
